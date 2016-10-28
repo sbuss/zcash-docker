@@ -12,7 +12,7 @@ fi
 if [[ ! -f "$HOME/.zcash-params/beta2-proving.key" ]]; then
     echo "No params found, fetching them"
     chmod +x $HOME/zcash/fetch-params.sh
-    $HOME/zcash/fetch-params.sh
+    $HOME/zcash/fetch-params.sh || exit 1
 fi
 
 $HOME/zcash/zcashd $@

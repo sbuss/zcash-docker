@@ -1,5 +1,8 @@
 FROM debian:jessie
 
+RUN apt-get update && \
+    apt-get install -y libgomp1
+
 WORKDIR /root
 COPY out /root/zcash
 COPY start.sh /root/start.sh

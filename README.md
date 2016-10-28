@@ -3,7 +3,9 @@
 To run
 
 ```sh
-docker run --rm -it -v $HOME/.zcash:/root/.zcash -v $HOME/.zcash-params:/root/.zcash-params sbuss/zcashd
+mkdir -p $HOME/.zcash
+mkdir -p $HOME/.zcash-params
+docker run --rm -it -p18232:18232 -p18233:18233 -p8233:8233 -p8232:8232 -v $HOME/.zcash:/root/.zcash -v $HOME/.zcash-params:/root/.zcash-params sbuss/zcashd
 ```
 
 Note that you need to mount in your own `$HOME/.zcashd` and `$HOME/.zcash-params`

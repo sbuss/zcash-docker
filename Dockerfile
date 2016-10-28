@@ -1,7 +1,7 @@
 FROM debian:jessie
 
 RUN apt-get update && \
-    apt-get install -y libgomp1
+    apt-get install -y libgomp1 wget
 
 WORKDIR /root
 COPY out /root/zcash

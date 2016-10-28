@@ -15,4 +15,4 @@ if [[ ! -f "$HOME/.zcash-params/beta2-proving.key" ]]; then
     $HOME/zcash/fetch-params.sh
 fi
 
-$HOME/zcash/zcashd
+$HOME/zcash/zcashd $@
